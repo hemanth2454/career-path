@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "id": "40489932-f7a3-4a14-975a-3bcb4acaa99c",
+      "username": "hemanth",
+      "password": "$2b$10$ZelVZ2gpLBa3.TQNMElKDOUGPav0EhHQ6PCpKngQvZvOHGbSlx5t2",
+      "profile": {
+        "name": "Hemanth",
+        "email": "hehemanth6868@gmail.com",
+        "phone": "7032335192",
+        "interests": "java development",
+        "skills": "java",
+        "academicDetails": "mca",
+        "coursePreference": "full stack java"
+      }
+    },
+    {
+      "id": "6c8d2408-6dd1-4440-a543-351619d3e4e6",
+      "username": "deva",
+      "password": "$2b$10$Bq1DG.PtS6VCwCFA01ELmuwD5XiAdmt7YhamzAIbDsc7n//7flVQK",
+      "profile": {
+        "name": "Hemanth",
+        "email": "hehemanth6868@gmail.com",
+        "phone": "7032335192",
+        "interests": "java development",
+        "skills": "java",
+        "academicDetails": "mca",
+        "coursePreference": "full stack java"
+      }
+    },
+    {
+      "id": "ed7f9255-a966-4c43-8f1e-421cdf96f3e0",
+      "username": "848",
+      "password": "$2b$10$vJxari0n64mcVEkc7l4O8uLH4dYeXyHBhNrvQuMJvcIzmMm9Ebifu",
+      "profile": {}
+    },
+    {
+      "id": "8f73b22e-7aae-4aeb-b082-0a646d6ab04a",
+      "username": "mani",
+      "password": "$2b$10$pXUgtUpUxBV8irjjqHrdOuoOiHBP8oTZfsOCHfKMn7wRStvABJniK",
+      "profile": {}
+    },
+    {
+      "id": "9643b45d-30f2-41f3-8dab-9d4de745db06",
+      "username": "dev",
+      "password": "$2b$10$XG/a1NMMgeGXeiH0hVurBOIZ5vg.zIJCSZJwre5tSQ3vLwwZICYO2",
+      "profile": {}
+    },
+    {
+      "id": "0aaf393e-75d7-4b02-94f7-b0e41902cbdc",
+      "username": "de",
+      "password": "$2b$10$Lymf0DincGt9PztERnYCaOBAqmCxE688eJEn7qctw1vJFKK2UgDC2",
+      "profile": {}
+    }
+  ]
+}
