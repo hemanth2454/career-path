@@ -4,6 +4,7 @@ import { AuthProvider, AuthContext } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Login from './pages/Login';
+import config from './config';
 import Home from './pages/Home';
 import Courses from './pages/Courses';
 import About from './pages/About';
@@ -49,6 +50,7 @@ function Layout() {
 }
 
 function App() {
+    console.log('Current API Configuration:', config.API_URL);
     return (
         <AuthProvider>
             <Router>

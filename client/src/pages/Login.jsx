@@ -13,6 +13,7 @@ const Login = () => {
     const navigate = useNavigate();
     const [error, setError] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
 
     React.useEffect(() => {
         if (!loading && user) {
@@ -127,13 +128,16 @@ const Login = () => {
                                             <i className="bi bi-lock text-primary"></i>
                                         </span>
                                         <input
-                                            type="password"
-                                            className="form-control form-control-lg border-start-0 ps-0 bg-light"
+                                            type={showPassword ? "text" : "password"}
+                                            className="form-control form-control-lg border-start-0 border-end-0 ps-0 bg-light"
                                             value={password}
                                             onChange={(e) => setPassword(e.target.value)}
                                             required
                                             placeholder="Enter your password"
                                         />
+                                        <span className="input-group-text bg-light border-start-0" style={{ cursor: 'pointer' }} onClick={() => setShowPassword(!showPassword)}>
+                                            <i className={`bi ${showPassword ? 'bi-eye-slash' : 'bi-eye'} text-primary`}></i>
+                                        </span>
                                     </div>
                                 </div>
                                 <button type="submit" className="btn btn-primary w-100 btn-lg mb-3 shadow-sm rounded-pill">

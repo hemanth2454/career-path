@@ -4,11 +4,12 @@
     "description": "MERN Stack Career Guidance Application",
     "main": "server/server.js",
     "scripts": {
-        "start": "npm run install-all && concurrently \"npm run server\" \"npm run client\"",
+        "start": "npm run install-all && concurrently --kill-others \"npm run server\" \"npm run client\"",
+        "build": "npm run install-all && cd client && npm run build",
         "server": "cd server && npm start",
         "client": "cd client && npm run dev",
         "install-all": "npm install && cd client && npm install && cd ../server && npm install",
-        "dev": "concurrently \"npm run server\" \"npm run client\""
+        "dev": "concurrently --kill-others \"npm run server\" \"npm run client\""
     },
     "keywords": [
         "mern",

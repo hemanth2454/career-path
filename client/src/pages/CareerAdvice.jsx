@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import apiConfig from '../config';
 
 const CareerAdvice = () => {
     const { user } = useContext(AuthContext);
@@ -20,7 +21,7 @@ const CareerAdvice = () => {
                             Authorization: `Bearer ${token}`
                         }
                     };
-                    const res = await axios.get('http://localhost:5000/api/ai/recommendations', config);
+                    const res = await axios.get(`${apiConfig.API_URL}/api/ai/recommendations`, config);
                     setRecommendations(res.data);
                 } catch (err) {
                     console.error("Error fetching recommendations:", err);

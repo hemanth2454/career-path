@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import apiConfig from '../config';
 
 const mockJobs = [
     { id: 1, title: 'Senior React Developer', company: 'TechSolutions Inc.', location: 'Remote', category: 'Software', salary: '$120k - $150k', posted: '2 days ago' },
@@ -22,7 +23,7 @@ const JobSearch = () => {
 
             setLoadingAI(true);
             try {
-                const response = await fetch('http://localhost:5000/api/ai/recommendations', {
+                const response = await fetch(`${apiConfig.API_URL}/api/ai/recommendations`, {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
                 const data = await response.json();

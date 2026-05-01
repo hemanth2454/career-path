@@ -18,8 +18,11 @@ const connectDB = async () => {
             }
         }
     } catch (error) {
-        console.error(`Error: ${error.message}`);
-        console.error('Make sure MongoDB is running locally on port 27017');
+        console.error(`MongoDB Connection Error: ${error.message}`);
+        if (!process.env.MONGO_URI) {
+            console.error('CRITICAL: MONGO_URI is not defined in environment variables!');
+        }
+        console.error('Make sure your database connection string is correct and your IP is whitelisted in MongoDB Atlas.');
         process.exit(1);
     }
 };

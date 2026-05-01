@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import apiConfig from '../config';
 
 const courses = {
     IT: [
@@ -67,7 +68,7 @@ const Courses = () => {
 
             setLoadingAI(true);
             try {
-                const response = await fetch('http://localhost:5000/api/ai/recommendations', {
+                const response = await fetch(`${apiConfig.API_URL}/api/ai/recommendations`, {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
                 const data = await response.json();

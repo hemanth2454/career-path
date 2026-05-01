@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import apiConfig from '../config';
 
 const Home = () => {
     const { user, updateUserProfile } = useContext(AuthContext);
@@ -27,7 +28,7 @@ const Home = () => {
                     setLoading(false);
                     return;
                 }
-                const res = await axios.get('http://localhost:5000/api/profile', {
+                const res = await axios.get(`${apiConfig.API_URL}/api/profile`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 if (res.data && res.data.name) {
@@ -40,7 +41,7 @@ const Home = () => {
 
                     // Fetch recommendations
                     try {
-                        const recRes = await axios.get('http://localhost:5000/api/ai/recommendations', {
+                        const recRes = await axios.get(`${apiConfig.API_URL}/api/ai/recommendations`, {
                             headers: { Authorization: `Bearer ${token}` }
                         });
                         setRecommendations(recRes.data);
